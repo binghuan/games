@@ -17,9 +17,10 @@
         <div class="brand">STUDIO BING-HUAN<span>Independent creations by BH_Lin</span></div>
         <nav aria-label="主要導覽"><a href="#collection">遊戲作品</a></nav>
         <div class="preferences" hidden>
-            <button id="language-toggle" class="preference-toggle" type="button" aria-label="Switch to English" data-active="first">
-                <span aria-hidden="true" lang="zh-Hant">中</span><span aria-hidden="true" lang="en">EN</span>
-            </button>
+            <div class="language-options" role="group" aria-label="語言 / Language">
+                <button class="language-option" type="button" lang="zh-Hant" data-language="zh-Hant" aria-pressed="true">中文</button>
+                <button class="language-option" type="button" lang="en" data-language="en" aria-pressed="false">English</button>
+            </div>
             <button id="theme-toggle" class="preference-toggle" type="button" aria-label="Dark mode" aria-pressed="false" data-active="first">
                 <span aria-hidden="true">☀</span><span aria-hidden="true">☾</span>
             </button>

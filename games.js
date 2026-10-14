@@ -122,7 +122,7 @@ const gameTranslations = {
 
 (() => {
     const root = document.documentElement;
-    const languageButton = document.getElementById('language-toggle');
+    const languageButtons = document.querySelectorAll('[data-language]');
     const themeButton = document.getElementById('theme-toggle');
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
     const textNodes = [];
@@ -155,10 +155,9 @@ const gameTranslations = {
         attributes.forEach(({ element, name, original }) => {
             element.setAttribute(name, language === 'en' ? gameTranslations[original] : original);
         });
-        languageButton.dataset.active = language === 'en' ? 'second' : 'first';
-        const languageLabel = language === 'en' ? 'Switch to Traditional Chinese' : '切換至英文';
-        languageButton.setAttribute('aria-label', languageLabel);
-        languageButton.title = languageLabel;
+        languageButtons.forEach(button => {
+            button.setAttribute('aria-pressed', String(button.dataset.language === language));
+        });
         themeButton.setAttribute('aria-label', language === 'en' ? 'Dark mode' : '深色模式');
         updateThemeLabel();
     }
@@ -184,10 +183,12 @@ const gameTranslations = {
     } catch (_) { /* Keep the default language. */ }
     setLanguage(language);
     setTheme(root.dataset.theme || 'system');
-    languageButton.addEventListener('click', () => {
-        const next = root.lang === 'en' ? 'zh-Hant' : 'en';
-        setLanguage(next);
-        save('games-language', next);
+    languageButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const next = button.dataset.language;
+            setLanguage(next);
+            save('games-language', next);
+        });
     });
     themeButton.addEventListener('click', () => {
         const next = isDark() ? 'light' : 'dark';

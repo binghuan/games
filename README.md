@@ -1,15 +1,25 @@
 # Games
 
-A simple Hello World website hosted on GitHub Pages.
+Studio Bing-Huan's game collection, with Traditional Chinese / English and light / dark themes.
 
 Website: https://binghuan.github.io/games/
 
 ## Deployment
 
-In the repository's **Settings → Pages**, select **Deploy from a branch**,
-then choose **main** and **/ (root)** and save.
+In the repository's **Settings → Pages**, select **GitHub Actions**.
 
-GitHub Pages publishes updates whenever changes are pushed to `main`.
+The workflow in `.github/workflows/static.yml` publishes updates whenever changes
+are pushed to `main`, and can also be run manually from the Actions tab.
+
+## Content
+
+`index.html` is the collection homepage. Styles live in `css/games.css`,
+translations and interactions in `games.js`, and initial theme preferences in
+`games-preferences.js`. Referenced covers, store badges, and the favicon are
+included under `images/` and `icon/`.
+
+The page and its assets were copied from `studio-binghuan-website/public/games.html`.
+The original website is unchanged; the author link points back to that website.
 
 ## Local preview
 

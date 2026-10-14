@@ -1,29 +1,271 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Hello World from binghuan's games on GitHub Pages.">
-    <title>Hello World | Games</title>
-    <style>
-      :root { color-scheme: dark; font-family: system-ui, sans-serif; }
-      * { box-sizing: border-box; }
-      body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #101828; color: #f9fafb; padding: 24px; }
-      main { text-align: center; max-width: 640px; }
-      .label { color: #a5b4fc; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; }
-      h1 { margin: 20px 0; font-size: clamp(48px, 10vw, 88px); letter-spacing: -.05em; line-height: 1.1; }
-      p { color: #cbd5e1; font-size: 18px; line-height: 1.6; }
-      a { display: inline-block; margin-top: 20px; padding: 12px 20px; border-radius: 10px; background: #a5b4fc; color: #101828; font-weight: 600; text-decoration: none; }
-      a:hover { background: #c7d2fe; }
-      a:focus-visible { outline: 3px solid white; outline-offset: 5px; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <p class="label">Games · GitHub Pages</p>
-      <h1>Hello World!</h1>
-      <p>A small beginning. Let the games begin.</p>
-      <a href="https://github.com/binghuan/games">View on GitHub</a>
+    <meta name="description" content="Studio Bing-Huan 自製遊戲作品集：Island Crafter、Grid Hacker、Rat Musou，以及更多遊戲實驗。探索遊戲介紹、創作故事與試玩連結。">
+    <meta name="theme-color" content="#f4efe6">
+    <title>Games · Studio Bing-Huan 自製遊戲</title>
+    <link rel="icon" href="icon/myWebApp.ico">
+    <script src="games-preferences.js"></script>
+    <link rel="stylesheet" href="css/games.css">
+    <script src="games.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">跳至主要內容</a>
+    <header class="site-header wrap">
+        <a class="brand" href="https://studiobinghuan.web.app/about.html">STUDIO BING-HUAN<span>Independent creations by BH_Lin</span></a>
+        <nav aria-label="主要導覽"><a href="#collection">遊戲作品</a></nav>
+        <div class="preferences" hidden>
+            <button id="language-toggle" class="preference-toggle" type="button" aria-label="Switch to English" data-active="first">
+                <span aria-hidden="true" lang="zh-Hant">中</span><span aria-hidden="true" lang="en">EN</span>
+            </button>
+            <button id="theme-toggle" class="preference-toggle" type="button" aria-label="Dark mode" aria-pressed="false" data-active="first">
+                <span aria-hidden="true">☀</span><span aria-hidden="true">☾</span>
+            </button>
+        </div>
+    </header>
+    <main id="main" class="wrap">
+        <section class="hero" aria-labelledby="page-title">
+            <p class="eyebrow">THE PLAY COLLECTION / 自製遊戲</p>
+            <h1 id="page-title">把一個靈感，<br>變成<span>一場遊戲。</span></h1>
+            <div class="hero-bottom"><p>從演算法裡的小島，到霓虹夜色中的生存挑戰。<br>這裡收藏我的遊戲作品，以及每個作品背後的想法。</p><a class="button primary" href="#collection">探索遊戲 <span aria-hidden="true">↓</span></a></div>
+        </section>
+
+        <section id="collection" aria-labelledby="collection-title">
+            <div class="section-heading"><h2 id="collection-title">遊戲作品 <span>Game collection</span></h2><span class="eyebrow">01 — 20</span></div>
+            <div class="games-grid">
+                <article class="game-card" id="island-crafter">
+                    <img class="game-cover" src="images/games/island-crafter.png" alt="Island Crafter  造島小匠 / Islands Crafter" width="1915" height="985" fetchpriority="high" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">演算法 × 島嶼解謎</p><h3>Island Crafter <small>造島小匠 / Islands Crafter</small></h3></div>
+                        <p class="lead">如果 LeetCode 的一道題目，可以變成一款遊戲？</p>
+                        <div class="download-links"><a class="store-badge web-badge" href="https://island-crafter.web.app/" target="_blank" rel="noopener noreferrer" title="在瀏覽器直接遊玩 ↗"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><rect x="2" y="4" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><path d="M2 11h28" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="7.5" r="1" fill="currentColor"/><circle cx="10" cy="7.5" r="1" fill="currentColor"/><path d="m13 15 8 5-8 5z" fill="currentColor"/></svg><span class="web-badge-copy"><span class="web-badge-label">PLAY ON WEB</span><span class="web-badge-title">直接遊玩</span></span></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded"><p>挑戰第 200 題「Number of Islands」時，我開始想像：讓玩家親手生成島嶼，會是什麼樣的體驗？於是，把計算島嶼數量的演算法放進關卡裡，將原本枯燥的練習，轉化為充滿互動與趣味的解謎。</p>
+                    <div class="actions"><a class="text-link" href="https://www.youtube.com/watch?v=u1gnngB9-90" target="_blank" rel="noopener noreferrer">觀看影片 ↗</a></div>
+                    <details class="video"><summary>遊戲示範影片</summary><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/u1gnngB9-90" title="Island Crafter 遊戲示範" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></details>
+                    <p class="credit">開發筆記 / BH_Lin · <time datetime="2025-08-06">2025.08.06</time></p></div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="algo-arcade">
+                    <img class="game-cover" src="images/games/algo-arcade.jpg" alt="ALGO ARCADE 火場救援：消防員帶領居民奔向安全出口" width="1280" height="853" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">邏輯解謎 × 九個冒險世界</p><h3>ALGO ARCADE <small>演算法遊樂場</small></h3></div>
+                        <p class="lead">把思考，變成一場冒險。不必會寫程式，只要願意試一試。</p>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded">
+                            <p>在火場中找到生路，在地城裡做出選擇。九個各具特色的世界，將演算法的靈感化為救援、推箱、接線與尋寶等邏輯挑戰，用下一步揭開答案。</p>
+                            <p>81 道關卡、243 顆星星，從看懂規則到找到更好的解法，依照自己的步調探索每個世界。</p>
+                            <div class="actions"><a class="text-link" href="https://algo-arcade-intro.web.app/" target="_blank" rel="noopener noreferrer">遊戲官方網站 ↗</a></div>
+                            <p class="credit">九個世界 · 81 道挑戰 · 敬請期待</p>
+                        </div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="grid-hacker">
+                    <img class="game-cover" src="images/games/grid-hacker.png" alt="Grid Hacker" width="1915" height="978" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">科幻駭入 × 路線規劃</p><h3>Grid Hacker</h3></div>
+                        <p class="lead">一條訊號路線，一場與時間的競賽。</p>
+                        <div class="download-links"><a class="store-badge" title="前往 App Store ↗" href="https://apps.apple.com/us/app/grid-hacker-puzzle/id6765736177" target="_blank" rel="noopener noreferrer"><img src="images/badges/app-store.svg" alt="前往 App Store ↗" width="144" height="48"></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded"><p>以科幻駭入風格呈現的網格解謎遊戲。玩家需要在限時內把訊號從 <code>START</code> 導向 <code>END</code>，一邊閃避陷阱與雷射，一邊規劃更有效率的路線，讓邏輯思考化為可親手操作的挑戰。</p>
+                    <div class="actions"><a class="button primary" href="https://www.youtube.com/watch?v=QOLu7HgdBhU" target="_blank" rel="noopener noreferrer">觀看遊戲影片 ↗</a><a class="text-link" href="https://studiobinghuan.blogspot.com/2026/04/grid-hacker.html" target="_blank" rel="noopener noreferrer">開發筆記 ↗</a></div>
+                    <details class="video"><summary>遊戲示範影片</summary><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/QOLu7HgdBhU" title="Grid Hacker 遊戲示範" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></details>
+                    <p class="credit">開發筆記 / BH_Lin · <time datetime="2026-04-26">2026.04.26</time></p></div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="rat-musou">
+                    <img class="game-cover" src="images/games/rat-musou.png" alt="Rat Musou  老鼠無雙" width="1911" height="979" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">俯視角動作 × 滅鼠生存</p><h3>Rat Musou <small>老鼠無雙</small></h3></div>
+                        <p class="lead">背上藥劑罐，迎戰四面八方的鼠群。</p>
+                        <div class="download-links"><a class="store-badge" title="前往 Steam ↗" href="https://store.steampowered.com/app/4765440/Rat_Musou/" target="_blank" rel="noopener noreferrer"><img src="images/badges/steam.svg" alt="前往 Steam ↗" width="144" height="48"></a><a class="store-badge" title="前往 App Store ↗" href="https://apps.apple.com/us/app/rat-musou/id6770559461" target="_blank" rel="noopener noreferrer"><img src="images/badges/app-store.svg" alt="前往 App Store ↗" width="144" height="48"></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded"><p>扮演滅鼠員，在場地中噴灑藥劑、收集金幣並累積經驗升級。每 3 級迎戰一隻 BOSS；擊敗牠後搭乘直昇機前往商店補血，再準備迎接下一波。</p>
+                    <div class="actions"><a class="text-link" href="https://rat-musou-intro.web.app/" target="_blank" rel="noopener noreferrer">遊戲官方網站 ↗</a></div>
+                    <p class="credit">開發筆記 / BH_Lin · <time datetime="2026-05-14">2026.05.14</time></p></div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="strait-defense">
+                    <img class="game-cover cover-zh" src="images/games/strait-defense-zh.png" alt="海峽防線遊戲封面，雷達環繞台灣地圖" width="1564" height="978" loading="lazy" decoding="async">
+                    <img class="game-cover cover-en" src="images/games/strait-defense-en.png" alt="Strait Defense title screen with radar surrounding a map of Taiwan" width="1564" height="978" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">架空戰役 × 即時塔防</p><h3>STRAIT DEFENSE <small>海峽防線</small></h3></div>
+                        <p class="lead">六道防線，守住最後一道。帶著每一場戰果，走向下一道防線。</p>
+                        <details class="card-details"><summary>詳細介紹</summary><div class="card-expanded">
+                            <p>一款以海島防衛為主題的即時塔防遊戲。六個關卡串起海上、灘頭、內陸與城市戰場，在不同地形與威脅之間，體驗逐步推進的架空防衛戰役。</p>
+                            <p>從艦艇、戰機到地面部隊，結合雷達、海搜與聲納的偵測差異，以及武器射程與目標類型的搭配，呈現多層次的防線部署。最終關卡以總統府為防守地標，迎接城市防衛的最後考驗。</p>
+                        </div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="taipei-outlaws">
+                    <img class="game-cover" src="images/games/taipei-outlaws.png" alt="台北無法地帶遊戲封面，機車騎士穿梭霓虹雨夜街道" width="1280" height="720" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">像素城市 × 劇情冒險</p><h3>Taipei Outlaws <small>台北無法地帶</small></h3></div>
+                        <p class="lead">一台借來的機車，一場台北雨夜裡的外送，走進街坊為自己發聲的故事。</p>
+                        <details class="card-details"><summary>詳細介紹</summary><div class="card-expanded">
+                            <p>以台北為靈感的單人離線城市冒險。小白帶著 NT$3,000，在霓虹街頭接單、送貨、存錢買車，卻因一份記憶卡與一通不實報案，捲入街區背後的真相。</p>
+                            <p>三章故事結合角色立繪對話、證據查證與公開具名或匿名的選擇。步行或騎機車探索夜市、公園、廟埕與河岸，感受車流、居民與晴雨變化；結局後仍可自由接單與探索。</p>
+                            <p class="credit">單人冒險 · 繁體中文 / English · 支援鍵盤與手把</p>
+                        </div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="crazy-delivery">
+                    <img class="game-cover" src="images/games/crazy-delivery.png" alt="瘋狂外送" width="1916" height="980" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">街機外送 × 城市冒險</p><h3>瘋狂外送 <small>Crazy Delivery</small></h3></div>
+                        <p class="lead">熱騰騰的餐點、忙碌的街道，每一次外送都是新的冒險。</p>
+                        <div class="download-links"><a class="store-badge" title="前往 Steam ↗" href="https://store.steampowered.com/app/5284580/" target="_blank" rel="noopener noreferrer"><img src="images/badges/steam.svg" alt="前往 Steam ↗" width="144" height="48"></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded">
+                            <p>一款俯視角 2D 街機外送遊戲。在車流、突發障礙與時間壓力之間穿梭，兼顧送達速度與餐點完整度，把每一趟外送的收入化為下一次車輛升級。</p>
+                            <p>市中心、夜市、工業區、住宅區、港口與山路，六個各具特色的區域，帶來不同的街道風景與外送故事。</p>
+                            <div class="actions"><a class="text-link" href="https://crazy-delivery-intro.web.app/" target="_blank" rel="noopener noreferrer">遊戲官方網站 ↗</a></div>
+                        </div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="highway-formosa">
+                    <img class="game-cover" src="images/games/highway-formosa.png" alt="Highway Formosa" width="1733" height="978" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">台灣風景 × 街機競速</p><h3>Highway Formosa</h3></div>
+                        <p class="lead">一台紅色敞篷車，從海風到霓虹，開出屬於自己的公路故事。</p>
+                        <div class="download-links"><a class="store-badge" title="前往 Steam ↗" href="https://store.steampowered.com/app/5398040/Highway_Formosa/" target="_blank" rel="noopener noreferrer"><img src="images/badges/steam.svg" alt="前往 Steam ↗" width="144" height="48"></a><a class="store-badge" title="前往 App Store ↗" href="https://apps.apple.com/us/app/highwayformosa/id6813165428" target="_blank" rel="noopener noreferrer"><img src="images/badges/app-store.svg" alt="前往 App Store ↗" width="144" height="48"></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded">
+                            <p>以台灣為靈感的單人街機賽車遊戲，結合限時競速、車流閃避與公路頭目追逐。沿途收集氮氣、穿越檢查點，在速度與風景之間找到自己的節奏。</p>
+                            <p>從東海岸、山路、台北市、夜市、賽博福爾摩沙到縱谷，六個場景各有專屬頭目。旅程由六個關卡組成，並可在檢查點選擇下一條路線，展開不同的島嶼冒險。</p>
+                            <div class="actions"><a class="text-link" href="https://highway-formosa-intro.web.app/" target="_blank" rel="noopener noreferrer">遊戲官方網站 ↗</a></div>
+                        </div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="little-bean">
+                    <img class="game-cover" src="images/games/little-bean.png" alt="little bean" width="1566" height="981" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">咖啡館經營 × 悠閒日常</p><h3>little bean <small>小豆咖啡館</small></h3></div>
+                        <p class="lead">一杯咖啡，一個小夢想。把街角的小店，經營成你喜歡的模樣。</p>
+                        <div class="download-links"><a class="store-badge" title="前往 App Store ↗" href="https://apps.apple.com/us/app/littlebeancafe/id6812957032" target="_blank" rel="noopener noreferrer"><img src="images/badges/app-store.svg" alt="前往 App Store ↗" width="144" height="48"></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded">
+                            <p>一款可愛等角視角的單人咖啡館經營遊戲。從迎接第一位客人開始，與夥伴一起累積小店的日常，將每杯咖啡的收入變成新設備、舒適的家具，以及下一個值得期待的早晨。</p>
+                            <p>18 款飲品逐步解鎖，從菜單到擺設，慢慢打造自己的風格。用 30 天寫下第一段咖啡故事，故事結束後也能繼續營業，依照自己的步調陪伴小店成長。</p>
+                            <div class="actions"><a class="text-link" href="https://little-bean-coffee-intro.web.app/" target="_blank" rel="noopener noreferrer">遊戲官方網站 ↗</a></div>
+                            <p class="credit">單人經營 · 繁體中文 / English</p>
+                        </div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="sword-shadow">
+                    <img class="game-cover" src="images/games/sword-shadow.png" alt="江湖劍影" width="1747" height="979" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><h3>江湖劍影</h3></div>
+                        <p class="lead">武俠像素風格的移動原型。玩家可操控男主角許凌風，在清風武館的庭院中自由探索。</p>
+                    </div>
+                </article>
+                <article class="game-card" id="gold-coast">
+                    <img class="game-cover" src="images/games/gold-coast.png" alt="Gold Coast  黃金海岸救生隊" width="1914" height="979" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><h3>Gold Coast <small>黃金海岸救生隊</small></h3></div>
+                        <p class="lead">以澳洲黃金海岸為靈感的 2D 救生員遊戲。在每回合三分鐘的挑戰中，救援泳客、應對海流，並妥善分配體力。</p>
+                    </div>
+                </article>
+                <article class="game-card" id="sudoku-solver">
+                    <img class="game-cover" src="images/games/sudoku-solver.png" alt="Sudoku Solver" width="632" height="473" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">演算法 × 數獨解題</p><h3>Sudoku Solver</h3></div>
+                        <p class="lead">把 LeetCode 裡的數獨演算法，變成看得見、用得到的網頁作品。</p>
+                        <div class="download-links"><a class="store-badge web-badge" href="https://crack-sudoku.web.app/" target="_blank" rel="noopener noreferrer" title="在瀏覽器直接遊玩 ↗"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><rect x="2" y="4" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><path d="M2 11h28" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="7.5" r="1" fill="currentColor"/><circle cx="10" cy="7.5" r="1" fill="currentColor"/><path d="m13 15 8 5-8 5z" fill="currentColor"/></svg><span class="web-badge-copy"><span class="web-badge-label">PLAY ON WEB</span><span class="web-badge-title">直接遊玩</span></span></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded">
+                            <p>練習 LeetCode 第 37 題「Sudoku Solver」與第 36 題「Valid Sudoku」時，我開始思考如何讓解題程式有實際用途，於是為演算法加上圖形介面，做成這個數獨網頁作品。</p>
+                            <p>結合自訂數獨題目、題目驗證與自動求解，讓抽象的程式邏輯轉化成直覺的視覺體驗。</p>
+                            <div class="actions"><a class="text-link" href="https://studiobinghuan.blogspot.com/2021/12/sudoku-solver.html" target="_blank" rel="noopener noreferrer">開發筆記 ↗</a></div>
+                            <p class="credit">開發筆記 / BH_Lin · <time datetime="2021-12-29">2021.12.29</time></p>
+                        </div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="dice-tossing">
+                    <img class="game-cover" src="images/games/dice-tossing.png" alt="Dice Tossing in 3D" width="628" height="422" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">Unity · 隨機決策</p><h3>Dice Tossing in 3D</h3></div>
+                        <p class="classic-lead">把難以決定的選項，交給一顆真正會滾動的骰子。</p>
+                        <div class="download-links"><a class="store-badge web-badge" href="https://dice-tossing.web.app/" target="_blank" rel="noopener noreferrer" title="在瀏覽器直接遊玩 ↗"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><rect x="2" y="4" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><path d="M2 11h28" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="7.5" r="1" fill="currentColor"/><circle cx="10" cy="7.5" r="1" fill="currentColor"/><path d="m13 15 8 5-8 5z" fill="currentColor"/></svg><span class="web-badge-copy"><span class="web-badge-label">PLAY ON WEB</span><span class="web-badge-title">直接遊玩</span></span></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded"><p>靈感來自同事用命令列工具擲骰子做決定，於是我用 Unity 製作了這個 3D 版本。使用者可以輸入前綴文字與候選項目，再讓骰子決定結果。</p>
+                    <div class="actions"><a class="text-link" href="https://studiobinghuan.blogspot.com/2021/01/tossing-dice.html" target="_blank" rel="noopener noreferrer">開發筆記 ↗</a></div>
+                    <p class="credit">開發筆記 / BH_Lin · <time datetime="2021-01-10">2021.01.10</time></p></div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="advertise-in-3d">
+                    <img class="game-cover" src="images/games/advertise-in-3d.png" alt="Advertise in 3D" width="629" height="465" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">Unity · 場景實驗</p><h3>Advertise in 3D</h3></div>
+                        <p class="classic-lead">探索廣告融入 3D 遊戲場景的可能性。</p>
+                        <div class="download-links"><a class="store-badge web-badge" href="https://ads-in-the-world.firebaseapp.com/" target="_blank" rel="noopener noreferrer" title="在瀏覽器直接遊玩 ↗"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><rect x="2" y="4" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><path d="M2 11h28" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="7.5" r="1" fill="currentColor"/><circle cx="10" cy="7.5" r="1" fill="currentColor"/><path d="m13 15 8 5-8 5z" fill="currentColor"/></svg><span class="web-badge-copy"><span class="web-badge-label">PLAY ON WEB</span><span class="web-badge-title">直接遊玩</span></span></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded"><p>以 Unity 3D 搭建街景，結合自製廣告下發後台，把廣告呈現在公車候車亭與超市牆面。玩家走進場景就能看到廣告，讓廣告成為遊戲環境的一部分。</p>
+                    <div class="actions"><a class="text-link" href="https://studiobinghuan.blogspot.com/2020/01/project-advertise-in-3d.html" target="_blank" rel="noopener noreferrer">開發筆記 ↗</a></div>
+                    <p class="credit">開發筆記 / BH_Lin · <time datetime="2020-01-01">2020.01.01</time></p></div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="the-defender">
+                    <img class="game-cover" src="images/games/the-defender.png" alt="The Defender" width="628" height="481" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">實況互動 · 太空防衛</p><h3>The Defender</h3></div>
+                        <p class="classic-lead">實況主守住防線，觀眾決定敵人何時來襲。</p>
+                        <div class="download-links"><a class="store-badge web-badge" href="https://the-space-defender.firebaseapp.com/" target="_blank" rel="noopener noreferrer" title="在瀏覽器直接遊玩 ↗"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><rect x="2" y="4" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><path d="M2 11h28" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="7.5" r="1" fill="currentColor"/><circle cx="10" cy="7.5" r="1" fill="currentColor"/><path d="m13 15 8 5-8 5z" fill="currentColor"/></svg><span class="web-badge-copy"><span class="web-badge-label">PLAY ON WEB</span><span class="web-badge-title">直接遊玩</span></span></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded"><p>實況主操控戰機，擊落敵人並阻止牠們突破防線；觀眾可以投入外星敵人進攻。若觀眾放入的敵人成功入侵，該觀眾便獲勝。也提供單人模式。</p>
+                    <div class="actions"><a class="text-link" href="https://studiobinghuan.blogspot.com/2019/03/the-defender.html" target="_blank" rel="noopener noreferrer">開發筆記 ↗</a></div>
+                    <p class="credit">開發筆記 / BH_Lin · <time datetime="2019-03-02">2019.03.02</time></p></div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="tetris-v2">
+                    <img class="game-cover" src="images/games/tetris-v2.png" alt="Tetris: V2" width="624" height="471" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">實況互動 · 方塊解謎</p><h3>Tetris: V2</h3></div>
+                        <p class="classic-lead">下一個方塊，由觀眾決定。</p>
+                        <div class="download-links"><a class="store-badge web-badge" href="https://bh-tetris.firebaseapp.com/" target="_blank" rel="noopener noreferrer" title="在瀏覽器直接遊玩 ↗"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><rect x="2" y="4" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><path d="M2 11h28" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="7.5" r="1" fill="currentColor"/><circle cx="10" cy="7.5" r="1" fill="currentColor"/><path d="m13 15 8 5-8 5z" fill="currentColor"/></svg><span class="web-badge-copy"><span class="web-badge-label">PLAY ON WEB</span><span class="web-badge-title">直接遊玩</span></span></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded"><p>實況主負責操作，觀眾選擇接下來出現的方塊形狀。若某位觀眾提供的方塊導致遊戲結束，該觀眾便獲勝。也提供單人模式。</p>
+                    <div class="actions"><a class="text-link" href="https://studiobinghuan.blogspot.com/2019/02/tetris-v2.html" target="_blank" rel="noopener noreferrer">開發筆記 ↗</a></div>
+                    <p class="credit">開發筆記 / BH_Lin · <time datetime="2019-02-14">2019.02.14</time></p></div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="lets-race-3d">
+                    <img class="game-cover" src="images/games/lets-race-3d.png" alt="Let’s Race in 3D" width="626" height="364" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">Unity · 實況互動</p><h3>Let’s Race in 3D</h3></div>
+                        <p class="classic-lead">把實況互動帶進 3D，這次由殭屍閃避車輛。</p>
+                        <div class="download-links"><a class="store-badge web-badge" href="https://let-us-race-in-3d.firebaseapp.com/" target="_blank" rel="noopener noreferrer" title="在瀏覽器直接遊玩 ↗"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><rect x="2" y="4" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><path d="M2 11h28" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="7.5" r="1" fill="currentColor"/><circle cx="10" cy="7.5" r="1" fill="currentColor"/><path d="m13 15 8 5-8 5z" fill="currentColor"/></svg><span class="web-badge-copy"><span class="web-badge-label">PLAY ON WEB</span><span class="web-badge-title">直接遊玩</span></span></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded"><p>這是我第一個使用 Unity 開發的遊戲。實況主操控殭屍閃避，觀眾則可把車輛投入遊戲，嘗試撞擊實況主控制的角色。</p>
+                    <div class="actions"><a class="text-link" href="https://studiobinghuan.blogspot.com/2018/09/this-is-game-lets-race-in-3d.html" target="_blank" rel="noopener noreferrer">開發筆記 ↗</a></div>
+                    <p class="credit">開發筆記 / BH_Lin · <time datetime="2018-09-28">2018.09.28</time></p></div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="lets-race">
+                    <img class="game-cover" src="images/games/lets-race.png" alt="Let’s Race（全民賽車）" width="625" height="301" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">實況互動 · 賽車</p><h3>Let’s Race（全民賽車）</h3></div>
+                        <p class="classic-lead">一人掌握方向，觀眾製造路上的挑戰。</p>
+                        <div class="download-links"><a class="store-badge web-badge" href="https://let-us-race.firebaseapp.com/" target="_blank" rel="noopener noreferrer" title="在瀏覽器直接遊玩 ↗"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><rect x="2" y="4" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><path d="M2 11h28" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="7.5" r="1" fill="currentColor"/><circle cx="10" cy="7.5" r="1" fill="currentColor"/><path d="m13 15 8 5-8 5z" fill="currentColor"/></svg><span class="web-badge-copy"><span class="web-badge-label">PLAY ON WEB</span><span class="web-badge-title">直接遊玩</span></span></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded"><p>實況主操控車子閃避，觀眾將車輛投入遊戲，阻擋實況主前進。從早期的實況互動版本，到後續的全民賽車介面，持續探索一起玩的可能性。</p>
+                    <div class="actions"><a class="text-link" href="https://studiobinghuan.blogspot.com/2018/05/lets-race.html" target="_blank" rel="noopener noreferrer">開發筆記 ↗</a></div>
+                    <p class="credit">開發筆記 / BH_Lin · <time datetime="2018-05-13">2018.05.13</time></p></div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="tetris">
+                    <img class="game-cover" src="images/games/tetris.png" alt="Tetris" width="477" height="617" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">Web · 早期作品</p><h3>Tetris</h3></div>
+                        <p class="classic-lead">第一款遊戲 Web App，從俄羅斯方塊開始。</p>
+                        <div class="download-links"><a class="store-badge web-badge" href="http://binghuan.github.io/tetris/" target="_blank" rel="noopener noreferrer" title="在瀏覽器直接遊玩 ↗"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><rect x="2" y="4" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><path d="M2 11h28" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="7.5" r="1" fill="currentColor"/><circle cx="10" cy="7.5" r="1" fill="currentColor"/><path d="m13 15 8 5-8 5z" fill="currentColor"/></svg><span class="web-badge-copy"><span class="web-badge-label">PLAY ON WEB</span><span class="web-badge-title">直接遊玩</span></span></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded"><p>一次 coding quest 帶來的挑戰，讓我花了一天完成初版。從簡單的示範版本出發，嘗試在網頁裡實作熟悉的方塊遊戲。</p>
+                    <div class="actions"><a class="text-link" href="https://studiobinghuan.blogspot.com/2016/03/tetris.html" target="_blank" rel="noopener noreferrer">開發筆記 ↗</a></div>
+                    <p class="credit">開發筆記 / BH_Lin · <time datetime="2016-03-23">2016.03.23</time></p></div></details>
+                    </div>
+                </article>
+                <article class="game-card" id="charade">
+                    <img class="game-cover" src="images/games/charade.png" alt="Charade（猜字謎遊戲板）" width="196" height="196" loading="lazy" decoding="async">
+                    <div class="game-copy">
+                        <div class="card-heading"><p class="eyebrow">Web · 團隊派對</p><h3>Charade（猜字謎遊戲板）</h3></div>
+                        <p class="classic-lead">讓題目準備更簡單，把舞台交給比手畫腳的人。</p>
+                        <div class="download-links"><a class="store-badge web-badge" href="https://studiobinghuan.firebaseapp.com/Charade.html" target="_blank" rel="noopener noreferrer" title="在瀏覽器直接遊玩 ↗"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><rect x="2" y="4" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><path d="M2 11h28" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="7.5" r="1" fill="currentColor"/><circle cx="10" cy="7.5" r="1" fill="currentColor"/><path d="m13 15 8 5-8 5z" fill="currentColor"/></svg><span class="web-badge-copy"><span class="web-badge-label">PLAY ON WEB</span><span class="web-badge-title">直接遊玩</span></span></a></div>
+                        <details class="card-details"><summary>詳細介紹與連結</summary><div class="card-expanded"><p>主持人可事先設定題目清單，再透過網頁呈現與翻頁。適合團隊活動、朋友聚會：一人用肢體表演題目，其他人負責猜答案。</p>
+                    <div class="actions"><a class="text-link" href="https://studiobinghuan.blogspot.com/2013/08/charade.html" target="_blank" rel="noopener noreferrer">開發筆記 ↗</a></div>
+                    <p class="credit">開發筆記 / BH_Lin · <time datetime="2013-08-26">2013.08.26</time></p></div></details>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <footer><span class="brand">STUDIO BING-HUAN</span><p>由好奇心出發，持續創作。<span>Created by BH_Lin</span></p><a href="#main">回到頂端 ↑</a></footer>
     </main>
-  </body>
+</body>
 </html>

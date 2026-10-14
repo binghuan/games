@@ -19,7 +19,7 @@ translations and interactions in `games.js`, and initial theme preferences in
 included under `images/` and `icon/`.
 
 The page and its assets were copied from `studio-binghuan-website/public/games.html`.
-The original website is unchanged; the author link points back to that website.
+The original website is unchanged.
 
 ## Local preview
 

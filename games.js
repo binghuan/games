@@ -50,7 +50,6 @@ const gameTranslations = {
     "扮演滅鼠員，在場地中噴灑藥劑、收集金幣並累積經驗升級。每 3 級迎戰一隻 BOSS；擊敗牠後搭乘直昇機前往商店補血，再準備迎接下一波。": "Play an exterminator: spray the rats, collect gold, and gain XP to level up. Face a boss every three levels, then catch the helicopter to the shop, heal up, and prepare for the next wave.",
     "動作": "Action",
     "前往 Steam ↗": "View on Steam ↗",
-    "遊戲官方網站 ↗": "Official website ↗",
     "Unity · 隨機決策": "UNITY · RANDOM DECISIONS",
     "把難以決定的選項，交給一顆真正會滾動的骰子。": "Let a rolling die make the difficult decisions.",
     "靈感來自同事用命令列工具擲骰子做決定，於是我用 Unity 製作了這個 3D 版本。使用者可以輸入前綴文字與候選項目，再讓骰子決定結果。": "Inspired by a colleague’s command-line dice tool, I built this 3D version in Unity. Enter a text prefix and a list of options, then let the dice choose the result.",
